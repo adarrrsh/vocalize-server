@@ -7,7 +7,7 @@ from datasets import load_dataset
 import io
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://main--vocalizeio.netlify.app"}})  # This will enable CORS for all routes
+CORS(app, resources={r"/*": {"origins": "https://vocalizeio.netlify.app/"}})  # This will enable CORS for all routes
 
 processor = SpeechT5Processor.from_pretrained("microsoft/speecht5_tts")
 model = SpeechT5ForTextToSpeech.from_pretrained("microsoft/speecht5_tts")
